@@ -1,30 +1,27 @@
 # Site settings
-title: TieHe Blog
+title: 半岛铁盒
 SEOTitle: 半岛铁盒的博客 | TieHe Blog
-header-img: img/home-bg.jpg
+header-img: img/fate1.jpg
 email: 2502737968@qq.com
 description: "这里是 @半岛铁盒 的个人博客，说了再见才发现再也见不到"
 keyword: "半岛铁盒, TieHe，学生，数字全栈学习者，技术小白，hot heart"
-url: "https://huangxuan.me" # your host, for absolute URL
-baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
+# 替换成你的 GitHub Pages 域名
+url: "https://TieHe2514.github.io/"
+baseurl: ""
 
 # Publish posts or collection documents with a future date.
 future: true
 
 # SNS settings
 RSS: false
-weibo_username: huxpro
-zhihu_username: huxpro
-github_username: huxpro
-twitter_username: huxpro
-#facebook_username:  huxpro
-#linkedin_username:  firstname-lastname-idxxxx
+# 全部替换为你自己账号，无则留空
+qq_username: "半岛铁盒"
+github_username: TieHe2514
 
 # Build settings
-# from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
 highlighter: rouge
 permalink: pretty
-paginate: 10
+paginate: 5
 exclude:
   [
     "less",
@@ -34,23 +31,17 @@ exclude:
     "README.md",
     "README.zh.md",
   ]
-anchorjs: true # if you want to customize anchor. check out line:181 of `post.html`
-# If you have timezone issue (e.g. #68) in China, uncomment to use this:
-#timezone: CN
+anchorjs: true
+# 中国时区开启，解决文章时间时差问题
+timezone: CN
 
 # Gems
-# from PR#40, to support local preview for Jekyll 3.0
-# make sure you have this gem installed
-# `$ gem install jekyll-paginate`
 plugins: [jekyll-paginate]
 
 # Markdown settings
-# replace redcarpet to kramdown,
-# although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
-# document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM # use Github Flavored Markdown !important
+  input: GFM
   syntax_highlighter_opts:
     span:
       line_numbers: false
@@ -58,45 +49,29 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# Disqus settings
-disqus_username: hux
-
-# Netease settings
+# 评论系统（关闭原作者Disqus，后续你可自行换评论）
+disqus_username: ""
 netease_comment: false
 
 # Analytics settings
-# Baidu Analytics
-# ba_track_id: [your track id]
+# 百度/谷歌统计全部清空，不再使用原作者统计ID
+# ba_track_id: 你的百度统计ID
+ga_track_id: ""
+ga_domain: ""
 
-# Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
-
-# Sidebar settings
-sidebar: true # whether or not using Sidebar.
-sidebar-about-description: "要做一个有 swag 的程序员 <br> React Team @ Meta"
-sidebar-avatar: https://github.com/Huxpro.png # use absolute URL, seeing it's used in both `/` and `/about/`
+# Sidebar 侧边栏个人信息（完全改成你的介绍）
+sidebar: true
+sidebar-about-description: "数字全栈学习者，热爱足球与代码 <br> 持续记录学习随笔"
+# 侧边头像：推荐上传头像到img文件夹，填写相对路径，也可直接用GitHub头像链接
+sidebar-avatar: https://github.com/TieHe2514.png
 
 # Featured Tags
-featured-tags: true # whether or not using Feature-Tags
-featured-condition-size: 1 # A tag will be featured if the size of it is more than this condition value
+featured-tags: true
+featured-condition-size: 1
 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
 
-# MathJax rendering for layout:page (e.g. post preview)
+# MathJax rendering
 page-mathjax: false
-
-# Friends
-friends:
-  [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
-  ]
