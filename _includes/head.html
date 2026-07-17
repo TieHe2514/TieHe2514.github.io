@@ -85,33 +85,103 @@
         letter-spacing: 0.5px;
     }
 
-    /* ========== 终极修复：侧边栏所有卡片文字强制全黑 ========== */
-    /* 匹配侧边栏卡片里所有元素，无视原类名，全部覆盖 */
+    /* ========== 侧边栏与信息块 ========== */
     .well * {
         color: #000 !important;
     }
-    /* 单独覆盖bootstrap自带的浅灰文字类 */
     .well .text-muted {
         color: #000 !important;
+    }
+    .sidebar-container {
+        color: #263238 !important;
+    }
+    .sidebar-container h5,
+    .sidebar-container h5 a {
+        color: #111 !important;
+        font-weight: 700;
+    }
+    .sidebar-container .short-about p {
+        color: #263238 !important;
+        line-height: 1.7;
+    }
+    .sidebar-container .short-about a {
+        color: #0f6f8f !important;
+    }
+    .site-profile {
+        margin: 18px 0 20px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(15, 23, 42, 0.12);
+    }
+    .site-profile__description {
+        margin: 0 0 12px !important;
+        color: #1f2937 !important;
+        font-size: 14px;
+    }
+    .site-profile__keywords {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+    .site-profile__keywords span {
+        display: inline-block;
+        padding: 3px 8px;
+        border: 1px solid rgba(15, 111, 143, 0.25);
+        border-radius: 999px;
+        background: rgba(15, 111, 143, 0.08);
+        color: #0f4f66 !important;
+        font-size: 12px;
+        line-height: 1.4;
     }
 
     /* ========== 首页大标题+副标题 ========== */
     .intro-header .site-heading h1,
     .intro-header .page-heading h1 {
-        color: #000 !important;
-        font-weight: 500 !important;
+        color: #fff !important;
+        font-weight: 700 !important;
         letter-spacing: 1px;
+        text-shadow: 0 3px 18px rgba(0, 0, 0, 0.78), 0 1px 3px rgba(0, 0, 0, 0.9);
     }
     .intro-header .site-heading .subheading,
     .intro-header .page-heading .subheading {
-        color: #1a1a1a !important;
-        font-weight: 400 !important;
+        color: rgba(255, 255, 255, 0.94) !important;
+        font-weight: 500 !important;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
     }
     .intro-header .post-heading h1,
     .intro-header .post-heading .subheading,
     .intro-header .post-heading .meta {
-        color: #000 !important;
-        font-weight: 400 !important;
+        color: #fff !important;
+        font-weight: 500 !important;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.75), 0 1px 2px rgba(0, 0, 0, 0.9);
+    }
+    .hero-site-profile {
+        max-width: 680px;
+        margin: 20px auto 0;
+    }
+    .hero-site-profile p {
+        margin: 0 0 12px;
+        color: rgba(255, 255, 255, 0.94) !important;
+        font-size: 16px;
+        font-weight: 500;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, 0.78), 0 1px 2px rgba(0, 0, 0, 0.9);
+    }
+    .hero-site-profile__keywords {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+    .hero-site-profile__keywords span {
+        display: inline-block;
+        padding: 4px 10px;
+        border: 1px solid rgba(255, 255, 255, 0.55);
+        border-radius: 999px;
+        background: rgba(0, 0, 0, 0.32);
+        color: #fff !important;
+        font-size: 13px;
+        line-height: 1.4;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(4px);
     }
 
     /* ========== 首页文章预览文字 ========== */

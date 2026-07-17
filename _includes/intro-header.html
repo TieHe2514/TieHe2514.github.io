@@ -106,6 +106,22 @@
         {% endif %}
           <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
           <span class="subheading">{{ page.description }}</span>
+          {% if page.url == "/" %}
+          <div class="hero-site-profile">
+            <p>{{ site.description }}</p>
+            {% if site.keyword %}
+            <div class="hero-site-profile__keywords" aria-label="博客关键词">
+              {% assign keywords = site.keyword | replace: '，', ',' | split: ',' %}
+              {% for keyword in keywords %}
+                {% assign clean_keyword = keyword | strip %}
+                {% if clean_keyword != '' %}
+                <span>{{ clean_keyword }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          {% endif %}
         </div>
       </div>
     </div>

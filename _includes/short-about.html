@@ -8,6 +8,22 @@
     {% if site.sidebar-about-description %}
     <p>{{site.sidebar-about-description}}</p>
     {% endif %}
+    {% if site.description %}
+    <div class="site-profile">
+      <p class="site-profile__description">{{ site.description }}</p>
+      {% if site.keyword %}
+      <div class="site-profile__keywords" aria-label="博客关键词">
+        {% assign keywords = site.keyword | replace: '，', ',' | split: ',' %}
+        {% for keyword in keywords %}
+          {% assign clean_keyword = keyword | strip %}
+          {% if clean_keyword != '' %}
+          <span>{{ clean_keyword }}</span>
+          {% endif %}
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
     <!-- SNS Link -->
     {% include sns-links.html %}
   </div>
