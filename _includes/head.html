@@ -77,20 +77,40 @@
         background: none !important;
     }
 
-    /* ========== 修正：两处红圈字体精准匹配 ========== */
-    /* 1. 顶部导航栏文字（匹配Hux原生选择器优先级） */
+    /* ========== 顶部导航栏文字 ========== */
     .navbar-custom .navbar-brand,
     .navbar-custom .navbar-nav > li > a {
         color: #000 !important;
-        font-weight: 400 !important; /* 从默认粗体改成常规粗细 */
+        font-weight: 400 !important;
         letter-spacing: 0.5px;
     }
 
-    /* 2. 首页大标题+副标题（精准匹配原生类名，强制覆盖） */
+    /* ========== 重点修正：侧边栏所有文字强制变黑 ========== */
+    /* 侧边栏模块标题（关于我、分类这些大标题） */
+    .sidebar .well h4 {
+        color: #000 !important;
+        font-weight: 600;
+    }
+    /* 侧边栏正文文字（昵称、介绍文案） */
+    .sidebar .well p {
+        color: #000 !important;
+    }
+    /* 侧边栏所有链接、标签、快捷入口 */
+    .sidebar .well a,
+    .sidebar .sidebar-shortcuts li a,
+    .sidebar .tags a {
+        color: #000 !important;
+    }
+    /* 侧边栏列表文字 */
+    .sidebar .well li {
+        color: #000 !important;
+    }
+
+    /* ========== 首页大标题+副标题 ========== */
     .intro-header .site-heading h1,
     .intro-header .page-heading h1 {
         color: #000 !important;
-        font-weight: 500 !important; /* 从默认700粗体改成中等粗细 */
+        font-weight: 500 !important;
         letter-spacing: 1px;
     }
     .intro-header .site-heading .subheading,
@@ -105,7 +125,7 @@
         font-weight: 400 !important;
     }
 
-    /* 3. 首页文章预览文字 */
+    /* ========== 首页文章预览文字 ========== */
     .post-preview .post-title,
     .post-preview .post-subtitle,
     .post-preview .post-meta,
@@ -113,7 +133,7 @@
         color: #000 !important;
     }
 
-    /* 4. 文章正文文字 */
+    /* ========== 文章正文文字 ========== */
     .post-container p,
     .post-container h1,
     .post-container h2,
@@ -125,22 +145,14 @@
         color: #000 !important;
     }
 
-    /* 5. 侧边栏文字 */
-    .well h4,
-    .well p,
-    .well a,
-    .sidebar-shortcuts li a {
-        color: #000 !important;
-    }
-
-    /* 6. 页脚文字 */
+    /* ========== 页脚文字 ========== */
     footer p,
     footer a,
     footer .text-muted {
         color: #000 !important;
     }
 
-    /* 7. 链接hover效果 */
+    /* ========== 链接hover效果 ========== */
     a:hover {
         color: #000 !important;
         opacity: 0.7;
