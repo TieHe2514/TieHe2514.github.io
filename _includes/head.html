@@ -63,7 +63,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- 自定义全局背景样式 -->
+    <!-- 自定义全局样式 -->
     <style>
     /* 全局背景铺满整个页面，滚动时固定 */
     html, body {
@@ -77,19 +77,79 @@
         background: none !important;
     }
 
-    /* 内容区、侧边栏、页脚改为半透明白色，兼顾背景显示和文字可读性 */
+    /* ========== 全局文字统一改为黑色 ========== */
+    /* 1. 顶部大标题、副标题 */
+    .intro-header .site-heading h1,
+    .intro-header .site-heading .subheading,
+    .intro-header .page-heading h1,
+    .intro-header .page-heading .subheading,
+    .intro-header .post-heading h1,
+    .intro-header .post-heading .subheading,
+    .intro-header .post-heading .meta {
+        color: #000 !important;
+    }
+
+    /* 2. 顶部导航栏文字 */
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav li a {
+        color: #000 !important;
+    }
+
+    /* 3. 首页文章预览：标题、摘要、发布信息 */
+    .post-preview .post-title,
+    .post-preview .post-subtitle,
+    .post-preview .post-meta,
+    .post-preview .post-meta a {
+        color: #000 !important;
+    }
+
+    /* 4. 文章正文：段落、各级标题、列表、引用 */
+    .post-container p,
+    .post-container h1,
+    .post-container h2,
+    .post-container h3,
+    .post-container h4,
+    .post-container h5,
+    .post-container li,
+    .post-container blockquote {
+        color: #000 !important;
+    }
+
+    /* 5. 侧边栏：小标题、介绍文字、标签 */
+    .well h4,
+    .well p,
+    .well a,
+    .sidebar-shortcuts li a {
+        color: #000 !important;
+    }
+
+    /* 6. 页脚文字 */
+    footer p,
+    footer a,
+    footer .text-muted {
+        color: #000 !important;
+    }
+
+    /* 7. 链接hover效果（保留交互感） */
+    a:hover {
+        color: #000 !important;
+        opacity: 0.7;
+    }
+
+    /* 内容区、侧边栏、页脚：高不透明白+柔和阴影，和浅色背景拉开层次 */
     main .container,
     .post-preview,
     .post-container,
     .well,
     footer {
-        background-color: rgba(255, 255, 255, 0.85) !important;
+        background-color: rgba(255, 255, 255, 0.95) !important;
         padding: 25px 30px;
         border-radius: 6px;
         margin-bottom: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     }
 
-    /* 可选：顶部导航栏半透明，不需要可以删除整段 */
+    /* 顶部导航栏半透明白色 */
     .navbar-custom {
         background-color: rgba(255, 255, 255, 0.9) !important;
         border-bottom: 1px solid rgba(0,0,0,0.1);
