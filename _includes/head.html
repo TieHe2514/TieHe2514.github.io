@@ -77,32 +77,35 @@
         background: none !important;
     }
 
-    /* ========== 字体优化：两处红圈区域 ========== */
-    /* 1. 顶部站点大标题+副标题：调轻字重+字间距，更舒展不厚重 */
-    .intro-header .site-heading h1,
-    .intro-header .page-heading h1,
-    .intro-header .post-heading h1 {
-        color: #000 !important;
-        font-weight: 500;
-        letter-spacing: 1px;
-    }
-    .intro-header .site-heading .subheading,
-    .intro-header .page-heading .subheading,
-    .intro-header .post-heading .subheading,
-    .intro-header .post-heading .meta {
-        color: #1a1a1a !important;
-        font-weight: 400;
-    }
-
-    /* 2. 顶部导航栏文字：常规字重+精致字间距，更协调 */
+    /* ========== 修正：两处红圈字体精准匹配 ========== */
+    /* 1. 顶部导航栏文字（匹配Hux原生选择器优先级） */
     .navbar-custom .navbar-brand,
-    .navbar-custom .nav li a {
+    .navbar-custom .navbar-nav > li > a {
         color: #000 !important;
-        font-weight: 400;
+        font-weight: 400 !important; /* 从默认粗体改成常规粗细 */
         letter-spacing: 0.5px;
     }
 
-    /* 3. 首页文章预览：标题、摘要、发布信息 */
+    /* 2. 首页大标题+副标题（精准匹配原生类名，强制覆盖） */
+    .intro-header .site-heading h1,
+    .intro-header .page-heading h1 {
+        color: #000 !important;
+        font-weight: 500 !important; /* 从默认700粗体改成中等粗细 */
+        letter-spacing: 1px;
+    }
+    .intro-header .site-heading .subheading,
+    .intro-header .page-heading .subheading {
+        color: #1a1a1a !important;
+        font-weight: 400 !important;
+    }
+    .intro-header .post-heading h1,
+    .intro-header .post-heading .subheading,
+    .intro-header .post-heading .meta {
+        color: #000 !important;
+        font-weight: 400 !important;
+    }
+
+    /* 3. 首页文章预览文字 */
     .post-preview .post-title,
     .post-preview .post-subtitle,
     .post-preview .post-meta,
@@ -110,7 +113,7 @@
         color: #000 !important;
     }
 
-    /* 4. 文章正文：段落、各级标题、列表、引用 */
+    /* 4. 文章正文文字 */
     .post-container p,
     .post-container h1,
     .post-container h2,
@@ -122,7 +125,7 @@
         color: #000 !important;
     }
 
-    /* 5. 侧边栏：小标题、介绍文字、标签 */
+    /* 5. 侧边栏文字 */
     .well h4,
     .well p,
     .well a,
@@ -137,14 +140,14 @@
         color: #000 !important;
     }
 
-    /* 7. 链接hover效果（保留交互感） */
+    /* 7. 链接hover效果 */
     a:hover {
         color: #000 !important;
         opacity: 0.7;
     }
 
-    /* ========== 内容区衬底分层 ========== */
-    /* 通用内容区、侧边栏、页脚：保持0.95高不透，保证阅读清晰 */
+    /* ========== 内容区衬底 ========== */
+    /* 通用内容区、侧边栏、页脚：高不透保证阅读 */
     main .container,
     .post-container,
     .well,
@@ -156,7 +159,7 @@
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     }
 
-    /* 首页posts文章卡片：单独加强透明度，露出更多背景 */
+    /* 首页posts文章卡片：加强透明 */
     .post-preview {
         background-color: rgba(255, 255, 255, 0.8) !important;
         padding: 25px 30px;
