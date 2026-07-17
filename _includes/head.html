@@ -85,24 +85,13 @@
         letter-spacing: 0.5px;
     }
 
-    /* ========== 重点修正：侧边栏所有文字强制变黑 ========== */
-    /* 侧边栏模块标题（关于我、分类这些大标题） */
-    .sidebar .well h4 {
-        color: #000 !important;
-        font-weight: 600;
-    }
-    /* 侧边栏正文文字（昵称、介绍文案） */
-    .sidebar .well p {
+    /* ========== 终极修复：侧边栏所有卡片文字强制全黑 ========== */
+    /* 匹配侧边栏卡片里所有元素，无视原类名，全部覆盖 */
+    .well * {
         color: #000 !important;
     }
-    /* 侧边栏所有链接、标签、快捷入口 */
-    .sidebar .well a,
-    .sidebar .sidebar-shortcuts li a,
-    .sidebar .tags a {
-        color: #000 !important;
-    }
-    /* 侧边栏列表文字 */
-    .sidebar .well li {
+    /* 单独覆盖bootstrap自带的浅灰文字类 */
+    .well .text-muted {
         color: #000 !important;
     }
 
