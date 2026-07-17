@@ -6,7 +6,7 @@ email: 2502737968@qq.com
 description: "这里是 @半岛铁盒 的个人博客，说了再见才发现再也见不到"
 keyword: "半岛铁盒, TieHe，学生，数字全栈学习者，技术小白，hot heart"
 # 替换成你的 GitHub Pages 域名
-url: "https://TieHe2514.me"
+url: "https://tiehe2514.github.io"
 baseurl: ""
 
 # Publish posts or collection documents with a future date.
@@ -61,7 +61,7 @@ ga_domain: ""
 
 # Sidebar 侧边栏个人信息（完全改成你的介绍）
 sidebar: true
-sidebar-about-description: "数字全栈学习者，热爱足球与代码 <br> 持续记录学习随笔"
+sidebar-about-description: "数字ic全栈学习者，热爱足球与代码 <br> 持续记录学习随笔"
 # 侧边头像：推荐上传头像到img文件夹，填写相对路径，也可直接用GitHub头像链接
 sidebar-avatar: https://github.com/TieHe2514.png
 
