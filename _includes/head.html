@@ -63,6 +63,39 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- 自定义全局背景样式 -->
+    <style>
+    /* 全局背景铺满整个页面，滚动时固定 */
+    html, body {
+        background: url("{{ site.baseurl }}/img/fate1.jpg") no-repeat center center fixed;
+        background-size: cover;
+        background-color: transparent !important;
+    }
+
+    /* 移除顶部标题栏独立背景，和全局背景融合 */
+    .intro-header {
+        background: none !important;
+    }
+
+    /* 内容区、侧边栏、页脚改为半透明白色，兼顾背景显示和文字可读性 */
+    main .container,
+    .post-preview,
+    .post-container,
+    .well,
+    footer {
+        background-color: rgba(255, 255, 255, 0.85) !important;
+        padding: 25px 30px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+    }
+
+    /* 可选：顶部导航栏半透明，不需要可以删除整段 */
+    .navbar-custom {
+        background-color: rgba(255, 255, 255, 0.9) !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    </style>
+    
     <!-- ga & ba script hoook -->
     <script></script>
 
