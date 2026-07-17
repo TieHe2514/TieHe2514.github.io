@@ -77,22 +77,29 @@
         background: none !important;
     }
 
-    /* ========== 全局文字统一改为黑色 ========== */
-    /* 1. 顶部大标题、副标题 */
+    /* ========== 字体优化：两处红圈区域 ========== */
+    /* 1. 顶部站点大标题+副标题：调轻字重+字间距，更舒展不厚重 */
     .intro-header .site-heading h1,
-    .intro-header .site-heading .subheading,
     .intro-header .page-heading h1,
+    .intro-header .post-heading h1 {
+        color: #000 !important;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    .intro-header .site-heading .subheading,
     .intro-header .page-heading .subheading,
-    .intro-header .post-heading h1,
     .intro-header .post-heading .subheading,
     .intro-header .post-heading .meta {
-        color: #000 !important;
+        color: #1a1a1a !important;
+        font-weight: 400;
     }
 
-    /* 2. 顶部导航栏文字 */
+    /* 2. 顶部导航栏文字：常规字重+精致字间距，更协调 */
     .navbar-custom .navbar-brand,
     .navbar-custom .nav li a {
         color: #000 !important;
+        font-weight: 400;
+        letter-spacing: 0.5px;
     }
 
     /* 3. 首页文章预览：标题、摘要、发布信息 */
@@ -136,13 +143,22 @@
         opacity: 0.7;
     }
 
-    /* 内容区、侧边栏、页脚：高不透明白+柔和阴影，和浅色背景拉开层次 */
+    /* ========== 内容区衬底分层 ========== */
+    /* 通用内容区、侧边栏、页脚：保持0.95高不透，保证阅读清晰 */
     main .container,
-    .post-preview,
     .post-container,
     .well,
     footer {
         background-color: rgba(255, 255, 255, 0.95) !important;
+        padding: 25px 30px;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* 首页posts文章卡片：单独加强透明度，露出更多背景 */
+    .post-preview {
+        background-color: rgba(255, 255, 255, 0.8) !important;
         padding: 25px 30px;
         border-radius: 6px;
         margin-bottom: 20px;
