@@ -1,7 +1,7 @@
 {
-  "name": "Hux Blog",
-  "short_name": "Hux Blog",
-  "description": "About an engineer & designer who loves web.",
+  "name": "半岛铁盒的博客",
+  "short_name": "TieHe Blog",
+  "description": "这里是 @半岛铁盒 的个人博客，说了再见才发现再也见不到",
   "icons": [{
     "src": "icons/128.png",
     "sizes": "128x128",
@@ -12,7 +12,7 @@
     "type": "image/png"
   }],
   "background_color": "#fff",
-  "theme_color": "#000",
+  "theme_color": "#1a58c6",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"
