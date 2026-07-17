@@ -4,7 +4,7 @@ title: "利昂内尔·梅西：绿茵场上独一无二的艺术与传奇"
 subtitle: "二十载征途，从罗萨里奥少年到无可争议的历史球王"
 author: "半岛铁盒"
 date: 2026-07-17 11:30:00
-background: '/img/messi1.jpg'
+background: "img/messi1.jpg"
 categories: [足球随笔]
 tags: [梅西, 世界杯, 足球, 传奇球星]
 header-img: "img/messi2.jpg"
